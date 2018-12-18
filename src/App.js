@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Login from "./components/user/Login";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
-  title = "MSIMBO";
-
-  sum() {
-    return 1 + 1;
-  }
-
-  render() {
-    return (
-      <section>
-    <div>
-
-      <h1>Hello {this.sum()}</h1>
-      <h1>Good Bye</h1>
-    </div>
-    <div>
-      <h2>React Course</h2>
-    </div>
-    </section>
-  );
+    render() {
+      return (
+        <Router>
+            <div>
+                <Switch>
+                    <Route exact path="/login" component={Login} />
+                </Switch>
+            </div>
+        </Router>
+        );
   }
 }
 
