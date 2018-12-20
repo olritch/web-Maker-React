@@ -61,7 +61,7 @@ function serializeUser(user, done) {
 
         function login(req, res) {
             const user = req.user;
-            res.json(user);
+            res.json(user); 
         }
 
         function logout(req, res) {
